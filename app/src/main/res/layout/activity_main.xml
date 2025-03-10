@@ -1,0 +1,116 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BADDFF"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="679dp"
+            android:layout_height="495dp"
+            android:alpha="0.4"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/chatHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="AI Chatbot"
+            android:textColor="#496580"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/chatHeader"
+            app:layout_constraintBottom_toTopOf="@id/inputContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/inputContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:orientation="horizontal"
+            android:padding="9dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <EditText
+                    android:id="@+id/userInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext"
+                    android:hint="Type your message..."
+                    android:padding="12dp"
+                    android:paddingEnd="60dp"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/micbutton"
+                    android:layout_width="31dp"
+                    android:layout_height="31dp"
+                    android:layout_marginLeft="242dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/mic5"
+                    android:backgroundTint="#120101"
+                    android:clickable="true"
+                    android:text="."
+                    app:iconTint="#000000" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/sendButton"
+                android:layout_width="100dp"
+                android:layout_height="53dp"
+                android:layout_marginLeft="6dp"
+                android:backgroundTint="#007AFF"
+                android:text="Send"
+                android:textColor="#FFFF"
+                android:textSize="23sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="54dp"
+            android:layout_height="55dp"
+            android:src="@drawable/menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <include layout="@layout/drawer_navigation"/>
+
+</androidx.drawerlayout.widget.DrawerLayout>
