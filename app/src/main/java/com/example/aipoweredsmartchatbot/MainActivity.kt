@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         // Menu Icon Click Listener (Opens Navigation Drawer)
         val menuIcon = findViewById<ImageView>(R.id.menuIcon)
         menuIcon.setOnClickListener {
-            drawerLayout.openDrawer(findViewById(R.id.navigationDrawer))
+            drawerLayout.openDrawer(findViewById(R.id.drawer_layout))
         }
 
         try {

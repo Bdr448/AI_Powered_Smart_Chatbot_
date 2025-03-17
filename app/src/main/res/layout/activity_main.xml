@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BADDFF"
+    android:background="@drawable/gradient_background"
     tools:context=".MainActivity">
 
 
@@ -13,18 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <ImageView
-            android:id="@+id/logoImage"
-            android:layout_width="679dp"
-            android:layout_height="495dp"
-            android:alpha="0.4"
-            android:scaleType="fitCenter"
-            android:src="@drawable/logo"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/chatHeader"
@@ -94,7 +82,7 @@
                 android:layout_width="100dp"
                 android:layout_height="53dp"
                 android:layout_marginLeft="6dp"
-                android:backgroundTint="#007AFF"
+                android:backgroundTint="#304FFE"
                 android:text="Send"
                 android:textColor="#FFFF"
                 android:textSize="23sp" />
@@ -104,6 +92,7 @@
             android:id="@+id/menuIcon"
             android:layout_width="54dp"
             android:layout_height="55dp"
+            android:layout_marginTop="20dp"
             android:src="@drawable/menu"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

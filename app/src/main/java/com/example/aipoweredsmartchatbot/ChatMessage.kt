@@ -1,4 +1,3 @@
 package com.example.aipoweredsmartchatbot
 
-class ChatMessage {
-}
+data class ChatMessage(val text: String, val isUser: Boolean)
